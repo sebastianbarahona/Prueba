@@ -1,0 +1,29 @@
+Clonar un nuevo repositorio en directorio local:
+git clone <url_gitclone>
+
+Halar cambios remotos a rama local
+git pull
+
+Subir cambios en local a rama remota
+git status (opcional)
+git add <archivo>
+git status (opcional)
+git commit -m "descripcion de los cambios"
+git push 
+
+Caso en el que un git push nos indica ue hay cambios en remoto que no tenemos en local:
+ejecutar: git pull
+
+a) Si el merge automatico fue exitoso, git nos abre un editor para concretar el commit. 
+   Tecleamos el comando :q para cerrar el editor y concretar el merge automatico. Seguidamente ejecutamos git push para subir nuestros cambios.
+
+b) Si el merge automatico falla y nos arroja un <Merge Conflict>, visualizar los archivos que nos arrojaron conflictos con el comando git status , se indicará que los archivos con conflicto están marcados con un "both". 
+   Para solucionar el conflicto manualmente, abrimos el archivo y detectamos la etiqueta >>>>>>>>>>>> HEAD ============ <<<<<<<<<<<<, teniendo en cuenta que el primer segmento (Entre el >>>>>>> HEAD Y el ========) corresponden a nuestros cambios locales y el segundo segmento (============== <<<<<<<<<<<<<<) corresponden a cambios en rama remota. Resolver el conflicto manualmente y eliminar las etiquetas >>>>>>>>>>>> HEAD ======== <<<<<<<<<<<. Finiquitar con un git add a los archivos corregidos y con un git commit para solventar el conflicto. Finalment un git push para establecer los cambios en rama remota
+
+
+Mostrar estado de repo local:
+git status
+
+
+Mostrar log de commits:
+git log
